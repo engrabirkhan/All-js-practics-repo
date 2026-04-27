@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+<button onclick="ObjAlert()">Alert</button>
+<button onclick="ObjConfirm()">Confirm</button>
+<button onclick="ObjPrompt()">Prompt</button>
+<button onclick="Objopen()">Open Google</button>
+<button onclick="Objclose()">Close Google</button>
+
+    <SCript>
+
+
+                                                    //PREE RECODET VIDEO
+
+
+                                                    //WINDOW OBJECT
+                                                     
+function ObjAlert(){
+alert("This is Alert Box");
+}
+
+function ObjConfirm(){
+   let result = confirm("This is Confirm Box");
+   document.write(result);
+}
+
+function ObjPrompt(){
+   let result = prompt("This is Prompt Box");
+   document.write(result);
+}
+
+function Objopen(){
+open();
+}
+
+function Objclose(){
+close();
+}
+
+
+setTimeout (function (){
+    alert("This is a delayed alert!");
+}, 10000);
+
+
+                                                             //JAVASCRIPT NAVIGATOR OBJECT
+
+
+var appCodeName=navigator.appCodeName;
+var appName=navigator.appName;
+var appVersion=navigator.appVersion;
+var cookieEnabled=navigator.cookieEnabled;
+var language=navigator.language;
+var userAgent=navigator.userAgent;
+var platform=navigator.platform;
+
+
+document.write("appCodeName: " + appCodeName + "<br>");
+document.write("appName: " + appName + "<br>"); 
+document.write("appVersion: " + appVersion + "<br>");
+document.write("cookieEnabled: " + cookieEnabled + "<br>");
+document.write("language: " + language + "<br>");
+document.write("userAgent: " + userAgent + "<br>");
+document.write("platform: " + platform + "<br>");   
+
+                                                                     //JS GEOLOCATION
+
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+           
+
+                var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+                    document.write("Latitude: " + latitude + "<br>");
+                    document.write("Longitude: " + longitude + "<br>");
+                    
+        });
+
+
+
+                   
+
+
+
+
+
+
+
+</SCript>
+</body>
+</html>
