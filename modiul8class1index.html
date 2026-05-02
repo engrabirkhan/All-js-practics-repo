@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+
+   <link rel="stylesheet" href="css/bootstrap.css">
 <body>
 
 
@@ -16,6 +17,62 @@
 <button onclick="Objopen()">Open Google</button>
 <button onclick="Objclose()">Close Google</button>
 
+
+
+
+
+<input onchange="myevent('change hoyche')"/><br>
+<input onkeydown="myevent('key down hoyche')"/><br>
+<input onkeyup="myevent('key up hoyche')"/><br>
+<input onchange="myevent('change hoyche')"/><br>
+
+
+
+<body onload="myevent('load hoyche')">
+    
+   <h1 id="myid"></h1>
+<h2  class="myclass"></h2>
+<h2 class="myclass"></h2>
+<h2 class="myclass"></h2>
+<h2 class="myclass"></h2>
+
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+
+
+
+
+
+
+<button onclick="demo()">Demo</button>
+
+
+<input id="num1"><br><br>
+<input id="num2"><br><br>
+<button onclick="add()">Add</button>
+
+
+
+<h1 class="" id="mid">Bangladesh</h1>
+
+<button class=" btn btn-danger" onclick="textchange()">Change Text</button>
+<button class=" btn btn-primary" onclick="textreset()">Reset Text</button>
+
+
+           <ul></ul>
+           <input type="text" name="additem" id="myinput">
+           <button onclick="additem()"></button>
+
+
+
+
+         
+
+
+
     <SCript>
 
 
@@ -23,7 +80,7 @@
 
 
                                                     //WINDOW OBJECT
-                                                     
+       /*                                              
 function ObjAlert(){
 alert("This is Alert Box");
 }
@@ -75,26 +132,80 @@ document.write("platform: " + platform + "<br>");
                                                                      //JS GEOLOCATION
 
 
-        navigator.geolocation.getCurrentPosition(function(position) {
-           
+                          navigator.geolocation.getCurrentPosition(function(position){
+                            var altitude = position.coords.altitude;
+                            var latitude = position.coords.latitude;
+                            var longitude = position.coords.longitude;
+                            var speed = position.coords.speed;
 
-                var latitude = position.coords.latitude;
-                    var longitude = position.coords.longitude;
-                    document.write("Latitude: " + latitude + "<br>");
-                    document.write("Longitude: " + longitude + "<br>");
-                    
-        });
+                            document.write("Latitude: " + latitude + "<br>");
+                            document.write("Longitude: " + longitude + "<br>");
+                            document.write("Speed: " + speed + "<br>");
+                            document.write("Altitude: " + altitude + "<br>");
+
+                          })
+
+                          // JS COMMON EVENTS
+          
+
+                            function myevent(msg){
+                                console.log(msg)
+                            }
+
+*/
 
 
+            //DOCUMENT OBJECT
+               
+            var elementById = document.getElementById("myid");
+            elementById.innerHTML ="This is heading 1";
 
-                   
+            var elementbyclass =document.getElementsByClassName("myclass");
+
+            elementbyclass[2].innerHTML = "This is heading 2";
+
+            var elementbyname = document.getElementsByName("myname");
+            elementbyname[3].innerHTML = "This is heading 3";
+
+            var elementbytagname = document.getElementsByTagName("h2");
+            elementbytagname[1].innerHTML = "This is heading 4";
 
 
+      function demo(){
+        let w=window.open();
+
+        w.document.open();
+        w.document.write("hello new window");
+        w.document.close();
+         
+      }
 
 
+      function add()  {
+      let num1 = document.getElementById("num1").value;
+      let num2 =  document.getElementById("num2").value;
+      let result = parseFloat(num1) + parseFloat(num2);
+      alert(result);
+      }           
+
+ function textchange(){
+          let text = document.getElementById('mid')
+          text.classList.add('text-danger');
+          text.classList.add('text-center');
+ }
+
+ function textreset(){
+          let text = document.getElementById('mid')
+          text.classList.remove('text-danger');
+          text.classList.remove('text-center');
+ }
+     
+
+
+          
 
 
 
 </SCript>
-</body>
+
 </html>

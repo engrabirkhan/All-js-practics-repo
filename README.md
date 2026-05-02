@@ -224,5 +224,168 @@ ARROW INLINE FUNCATION
 PREE RECODET VIDEO
 -----------------------------------
 
+1.WINDOW OBJECT
+-----------------------------------------
+2.JAVASCRIPT NAVIGATOR OBJECT
+---------------------------------------
+3.JS GEOLOCATION
+------------------------------
+4.JS COMMON EVENTS
+--------------------------------------
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WINDOW OBJECT
+--------------------------------------------------------------
+
+function ObjAlert(){
+alert("This is Alert Box");
+}
+
+function ObjConfirm(){
+   let result = confirm("This is Confirm Box");
+   document.write(result);
+}
+
+function ObjPrompt(){
+   let result = prompt("This is Prompt Box");
+   document.write(result);
+}
+
+function Objopen(){
+open();
+}
+
+function Objclose(){
+close();
+}
+
+
+setTimeout (function (){
+    alert("This is a delayed alert!");
+}, 10000);
+
+
+
+JAVASCRIPT NAVIGATOR OBJECT
+--------------------------------------------
+
+
+var appCodeName=navigator.appCodeName;
+var appName=navigator.appName;
+var appVersion=navigator.appVersion;
+var cookieEnabled=navigator.cookieEnabled;
+var language=navigator.language;
+var userAgent=navigator.userAgent;
+var platform=navigator.platform;
+
+
+document.write("appCodeName: " + appCodeName + "<br>");
+document.write("appName: " + appName + "<br>"); 
+document.write("appVersion: " + appVersion + "<br>");
+document.write("cookieEnabled: " + cookieEnabled + "<br>");
+document.write("language: " + language + "<br>");
+document.write("userAgent: " + userAgent + "<br>");
+document.write("platform: " + platform + "<br>");  
+
+JS GEOLOCATION
+-------------------------------------------
+   navigator.geolocation.getCurrentPosition(function(position){
+                            var altitude = position.coords.altitude;
+                            var latitude = position.coords.latitude;
+                            var longitude = position.coords.longitude;
+                            var speed = position.coords.speed;
+
+                            document.write("Latitude: " + latitude + "<br>");
+                            document.write("Longitude: " + longitude + "<br>");
+                            document.write("Speed: " + speed + "<br>");
+                            document.write("Altitude: " + altitude + "<br>");
+
+                          })
+                                              JS COMMON EVENTS
+ ------------------------------------------------------------------------------------------------------------
+
+
+                            function myevent(msg){
+                                console.log(msg)
+                            }
+
+<button onclick="myevent('click hoyese')">click hoyese</button>
+<button onchange="myevent('change hoyese')">change hoyese</button>
+<button onmouseover="myevent('mouseover hoyese')">mouseover hoyese</button>
+<button onmousemove="myevent('mousemove hoyese')">mousemove hoyese</button>
+
+
+             DOCUMENT OBJECT
+----------------------------------------------------------------
+
+
+
+   <h1 id="myid"></h1>
+<h2 class="myclass"></h2>
+<h2 class="myclass"></h2>
+<h2 class="myclass"></h2>
+<h2 class="myclass"></h2>
+
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+<h3 name="myname"></h3>
+
+
+
+
+
+                var elementById = document.getElementById("myid");
+            elementById.innerHTML ="This is heading 1";
+
+            var elementbyclass =document.getElementsByClassName("myclass");
+
+            elementbyclass[2].innerHTML = "This is heading 2";
+
+            var elementbyname = document.getElementsByName("myname");
+            elementbyname[3].innerHTML = "This is heading 3";
+
+            var elementbytagname = document.getElementsByTagName("h2");
+            elementbytagname[1].innerHTML = "This is heading 4";
+
+
+
+
+
+
+
+<button onclick="demo()">Demo</button>
+
+
+
+
+              function demo(){
+        let w=window.open();
+
+        w.document.open();
+        w.document.write("hello new window");
+        w.document.close();
+         
+      }
